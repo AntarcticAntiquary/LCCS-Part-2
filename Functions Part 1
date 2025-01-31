@@ -1,0 +1,148 @@
+# Author='Daniel Lewis'
+# Telos='Classwork/Homework'
+# Topic='Functions'
+# Identifier='Tasks pg 37'
+# Date=30-01-25
+
+# Task 1:
+print('Task-1:')
+print()
+print('I do not like green eggs and ham')
+print('I do not like them Sam-I-Am')
+print()
+print('I do not like them here or there')
+print('I do not like them anywhere')
+print('I do not like them in a house')
+print('I do not like them with a mouse')
+print()
+print('I do not like green eggs and ham')
+print('I do not like them Sam-I-Am')
+print()
+print('I do not like them in a box')
+print('I do not like them with a fox')
+print('I will not eat them in the rain')
+print('I will not eat them on a train')
+print()
+print('I do not like green eggs and ham')
+print('I do not like them Sam-I-Am')
+print()
+
+# Task 2:
+print('Task-2:')
+def chorus():
+    print()
+    print('I do not like green eggs and ham')
+    print('I do not like them Sam-I-Am')
+    print()
+chorus()
+print('I do not like them here or there')
+print('I do not like them anywhere')
+print('I do not like them in a house')
+print('I do not like them with a mouse')
+chorus()
+print('I do not like them in a box')
+print('I do not like them with a fox')
+print('I will not eat them in the rain')
+print('I will not eat them on a train')
+chorus()
+
+# Task 3
+print('Task-3:')
+def verse1():
+    print('I do not like them here or there')
+    print('I do not like them anywhere')
+    print('I do not like them in a house')
+    print('I do not like them with a mouse')
+def verse2():
+    print('I do not like them in a box')
+    print('I do not like them with a fox')
+    print('I will not eat them in the rain')
+    print('I will not eat them on a train')
+chorus()
+verse1()
+chorus()
+verse2()
+chorus()
+
+# Task 4
+"""
+Functions are especially useful for reusability: If the same code will be reused, at all, functions are a more effcient way to do it
+"""
+
+# Task 5
+print('Task-5:')
+print()
+def verse1Africa():
+    print('I hear the drums echoing tonight')
+    print('But she hears only whispers of some quiet conversation')
+    print('She\'s coming in, 12:30 flight')
+    print('The moonlit wings reflect the stars that guide me towards salvation')
+    print()
+    print('I stopped an old man along the way')
+    print('Hoping to find some long-forgotten words or ancient melodies')
+    print('He turned to me as if to say')
+    print('\'Hurry, boy, it\'s waiting there for you\'')
+    print()
+def chorusAfrica():
+    print('It\'s gonna take a lot to drag me away from you')
+    print('There\'s nothing that a hundred men or more could ever do')
+    print('I bless the rains down in Africa')
+    print('Gonna take some time and do the things we never had')
+    print()
+def verse2Africa():
+    print('The wild dogs cry out in the night')
+    print('As they grow restless longing for some solitary company')
+    print('I know that I must do what\'s right')
+    print('Sure as Kilimanjaro rises like Olympus above the Serengeti')
+    print('I seek to cure what\'s deep inside')
+    print('Frightened of this thing that I\'ve become')
+    print()
+def outroAfrica():
+print('\'Hurry, boy, it\'s waiting there for you\'')
+    print()
+    print('It\'s gonna take a lot to drag me away from you')
+    print('There\'s nothing that a hundred men or more could ever do')
+    print('I bless the rains down in Africa')
+    print('I bless the rains down in Africa (I bless the rain)')
+    print('I bless the rains down in Africa (I bless the rain)')
+    print()
+    print('I bless the rains down in Africa')
+    print('I bless the rains down in Africa (I bless the rain)')
+    print('Gonna take some time and do the things we never had')
+    print()
+verse1Africa()
+chorusAfrica()
+verse2Africa()
+chorusAfrica()
+outroAfrica()
+
+# Task 6
+print('Task-5:')
+print()
+def jack_jill():
+    print('Jack and Jill went up the hill')
+    print('To fetch a pail of water')
+    print('Jack fell down and broke his crown')
+    print('And Jill came tumbling after')
+print('The Start!')
+jack_jill()
+print('The End!')
+print()
+
+# Task 7
+print('Task-7:')
+print()
+def grasshopper_bully():
+    print('Way down south where bananas grow,')
+print('A grasshopper stepped on an elephant\'s toe.')
+    print('The elephant said, with tears in its eyes,')
+    print('\'Pick on somebody your own size.\'')
+grasshopper_bully()
+print()
+
+# Task 8:
+"""
+The error is that the functions called are not the same as the ones defined;
+the ones called are displayVerse while the ones defined are showVerse
+They must be exactly the same for the program to work
+"""
