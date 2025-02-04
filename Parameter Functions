@@ -1,0 +1,115 @@
+def crazy():
+    print('Crazy? I was crazy once!')
+    print('They locked me in a room')
+    print('A rubber room')
+    print('A rubber room with rats')
+    print('And rats make me crazy!')
+    print()
+    
+def farewell(name):
+    print('Goodbye',name+', and see you soon!')
+
+def calculateTotal(price,quantity):
+    cost=round((price*quantity),2)
+    return cost
+
+def calculateArea(radius):
+    area=round(((22/7)*(radius**2)),2)
+    return area
+
+def calculateRectangleProperties(length,width):
+    area=length*width
+    perimeter=(2*length)+(2*width)
+    return area,perimeter
+
+def isValidTemperature(temperature):
+    if temperature>-51 and temperature<51:
+        return True
+    else:
+        return False
+
+farewell('Daniel')
+farewell('Chris')
+farewell('Jakub')
+print()
+print('The total cost of 62 eggs at €979.99 each is',calculateTotal(979.99,62),'euro')
+print('The total cost of 48 galaxies at €0.02 each is',calculateTotal(0.02,48),'euro')
+print()
+print('The area of a circle with radius 5.5 is',calculateArea(5.5))
+print('The area of a circle with radius 981 is',calculateArea(981))
+print()
+area,perimeter=calculateRectangleProperties(9,8)
+print('Length: 9 Width: 8 Area:',area,'Perimeter:',perimeter)
+print()
+area,perimeter=calculateRectangleProperties(99,88)
+print('Length: 99 Width: 88 Area:',area,'Perimeter:',perimeter)
+print()
+if isValidTemperature(66):
+    print('66 Celsius is a valid temperature')
+else:
+    print('66 Celsius is not a valid temperature')
+print()
+
+def greet(name):
+    print('Hello I guess. What was your name again? Oh yeah,',name+'.')
+    
+def calculateAverage(grade1,grade2):
+    avg=(grade1+grade2)/2
+    return avg
+
+def calculateClassAverage(classList):
+    total=0
+    classNum=len(classList)
+    for result in classList:
+        total+=result
+    avg=total/classNum
+    return avg
+
+def isValidGrade(grade):
+    if grade>=0 and grade<=100:
+        return True
+    else:
+        return False
+
+def addGrade(gradeList,grade):
+    if isValidGrade(grade):
+        gradeList.append(grade)
+        
+def removeGrade(gradeList,grade):
+    if grade in gradeList:
+        gradeList.pop(grade)
+        
+def findHighestGrade(gradeList,grade):
+    highest=0
+    for result in gradeList:
+        if result>highest:
+            highest=result
+    return highest
+
+def findLowestGrade(gradeList,grade):
+    lowest=100
+    for result in gradeList:
+        if result<lowest:
+            lowest=result
+    return lowest
+
+def countPassGrades(gradeList):
+    passNum=0
+    for result in gradeList:
+        if result>=50:
+            passNum+=1
+    return passNum
+
+def printGradeReport(gradeList):
+    average=calculateClassAverage(gradeList)
+    highest=findHighestGrade(gradeList)
+    lowest=findLowestGrade(gradeList)
+    passNum=countPassGrades(gradeList)
+    print('Class Report:')
+    print('The class average is',average,'%')
+    print('The highest grade is',highest,'%')
+    print('The lowest grade is',lowest,'%')
+    print(passNum,'students passed')
+    
+def calculateMedian(gradeList):
+    gradeList.sort()
