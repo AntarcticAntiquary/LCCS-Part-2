@@ -138,3 +138,52 @@ myList=[0,1,1,1,0,0]
 
 print(findMode(myList))
 print()
+
+# Test greet function
+# ID   # Test Data  # Explanation  # Expected Result # Actual Result # Pass #
+#############################################################################
+# 1    # 'Alice'    # Regular name # Hello Alice!    # Hello Alice!  # Y    #
+# 2    # 'Bob'      # Regular name # Hello Bob!      # Hello Bob!    # Y    #
+# 3    # 'qxvts'    # Nonsense     # Hello qxvts!    # Hello qxvts!  # Y    #
+# 4    # 107        # Integer      # Hello 107!      # TypeError     # N    #
+# 5    # ' '        # Space        # Hello  !        # Hello  !      # Y    #
+# 6    #            # Nothing      # Hello !         # TypeError     # N    #
+#############################################################################
+# Conclusion: The function only accepts strings
+
+# Test Calculate Average Function
+# ID   # Test Data   # Explanation  # Expected Result # Actual Result # Pass #
+##############################################################################
+# 1    # 1,1         # Same number  # 1               # 1.0           # Y    #
+# 2    # 10,5        # Different    # 7.5             # 7.5           # Y    #
+# 3    # 5,10        # Out of order # 7.5             # 7.5           # Y    #
+# 4    # 1000,30000  # Big numbers  # 15500           # 15500.0       # Y    #
+# 5    # -3,-15      # Negative     # -9              # -9            # Y    #
+# 6    # 1.2,3.6     # Floats       # 2.4             # 2.4           # Y    #
+# 7    # 'one','two' # text         # 1.5             # TypeError     # N    #
+##############################################################################
+
+# Test Calculate Class Average Function
+# ID   # Test Data  # Explanation  # Expected Result # Actual Result     # Pass #
+#################################################################################
+# 1    # 1,2,3      # Simple nos.  # 2               # 2.0               # Y    #
+# 2    # 4,5,1,2    # Out of order # 3               # 3.0               # Y    #
+# 3    # 5,32,-9    # Negative     # 9.33            # 9.33              # Y    #
+# 4    # 23,8.5,0.1 # Floats       # 10.53           # 10.53             # Y    #
+# 5    # 1,'one',2  # text         # 1.33            # TypeError         # N    #
+# 6    #            # Empty list   # 0               # ZeroDivisionError # N    #
+# 7    # 1          # One element  # 1               # 1.0               # Y    #
+#################################################################################
+
+#  Test Is Valid Grade Function        
+# ID   # Test Data  # Explanation  # Expected Result # Actual Result # Pass #
+#############################################################################
+# 1    # 56         # Normal       # True            # True          # Y    #
+# 2    # 0          # Boundary     # True            # True          # Y    #
+# 3    # 100        # Boundary     # True            # True          # Y    #
+# 4    # 112        # Over         # False           # False         # Y    #
+# 5    # -32        # Under        # False           # False         # Y    #
+# 6    # 62.9       # Float        # True            # True          # Y    #
+# 7    # 'asdf'     # Text         # False           # TypeError     # N    #
+# 8    #            # Nothing      # False           # TypeError     # N    #
+#############################################################################
