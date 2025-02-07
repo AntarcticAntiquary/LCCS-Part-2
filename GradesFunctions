@@ -1,0 +1,140 @@
+def greet(name): # Provide greeting message with name
+    print('Hello I guess. What was your name again? Oh yeah,',name+'.')
+    
+def calculateAverage(grade1,grade2): # Calculates the mean of two numbers
+    avg=(grade1+grade2)/2
+    return avg
+
+def calculateClassAverage(classList): # Calculates mean of a list
+    total=0
+    classNum=len(classList)
+    for result in classList: # Adds up all the elements
+        total+=result
+    avg=round(total/classNum,2) # Divide by list length and round
+    return avg
+
+def isValidGrade(grade): # Checks if an inputted grade is valid or not
+    if grade>=0 and grade<=100:
+        return True
+    else:
+        return False
+
+def addGrade(gradeList,grade): # Adds a grade to a list of grades
+    if isValidGrade(grade):
+        gradeList.append(grade)
+        
+def removeGrade(gradeList,grade): # Removes a grade from a list of grades
+    if grade in gradeList:
+        ind=gradeList.index(grade)
+        gradeList.pop(ind)
+        
+def findHighestGrade(gradeList): # Find the highest grade in a list
+    highest=0
+    for result in gradeList: # Checks all of the values, remembering the highest
+        if result>highest:
+            highest=result
+    return highest
+
+def findLowestGrade(gradeList): # Find lowest grade in a list
+    lowest=100
+    for result in gradeList: # Works same way as above
+        if result<lowest:
+            lowest=result
+    return lowest
+
+def countPassGrades(gradeList): # Counts the number of grades over 50
+    passNum=0
+    for result in gradeList:
+        if result>=50:
+            passNum+=1
+    return passNum
+
+def printGradeReport(gradeList): # Print a report of grades with average, highest, lowest and passes
+    average=calculateClassAverage(gradeList)
+    highest=findHighestGrade(gradeList)
+    lowest=findLowestGrade(gradeList)
+    passNum=countPassGrades(gradeList)
+    print('Class Report:')
+    print('The class average is',average,'%')
+    print('The highest grade is',highest,'%')
+    print('The lowest grade is',lowest,'%')
+    print(passNum,'students passed out of',len(gradeList))
+    
+def calculateMedian(gradeList): # Calculates the median of a list
+    gradeList.sort()
+    length=len(gradeList)
+    if length%2==1:
+        median=gradeList[(length+1)/2] # If odd, median is the middle value
+    elif length%2==0:
+        num1=gradeList[int(length/2)]
+        num2=gradeList[int((length/2)+1)] # If even, median is the two middle values added and divided by 2
+        median=(num1+num2)/2
+    return median
+
+def findMode(gradeList): # Finds the mode(s) of a list
+    count=0
+    modeslist=[] # Lists the modes (there can be multiple)
+    alreadydone=[] # Tracks which values have already been considered (otherwise we will have duplicates in results)
+    for result in gradeList:
+        if result not in alreadydone: # If this number hasn't already been considered
+            tempcount=gradeList.count(result)
+            if tempcount>count: # If it appears more times wipe list of results and add this result
+                modeslist=[]
+                modeslist.append(result)
+                count=tempcount
+            elif tempcount==count: # If it appears an equal amount of times both are results
+                modeslist.append(result)
+            alreadydone.append(result)
+    if len(modeslist)==2:
+        return modeslist[0],modeslist[1]
+    elif len(modeslist)==1:
+        return modeslist[0]
+
+grades=[85,92,78,90,88,76,95,89,73,84]
+
+greet('Alice')
+greet('Bob')
+greet('Charlie')
+print()
+
+print(calculateAverage(85,92))
+print(calculateAverage(78,90))
+print(calculateAverage(88,76))
+print()
+
+print(calculateClassAverage(grades))
+print()
+
+print(isValidGrade(85))
+print(isValidGrade(-5))
+print(isValidGrade(105))
+print(isValidGrade(92))
+print()
+
+addGrade(grades,91)
+print(grades)
+print()
+
+removeGrade(grades,78)
+print(grades)
+print()
+
+print(findHighestGrade(grades))
+print()
+
+print(findLowestGrade(grades))
+print()
+
+print(countPassGrades(grades))
+print()
+
+printGradeReport(grades)
+print()
+
+print(calculateMedian(grades))
+print()
+
+myList=[0,1,1,1,0,0]
+
+print(findMode(myList))
+print()
