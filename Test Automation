@@ -1,0 +1,44 @@
+# Author='Daniel Lewis'
+# Date=10-2-2025
+# Purpose='Test Case Automation'
+
+# Function to test
+def calculateAverage(grade1,grade2): # Calculates the mean of two numbers
+    avg=(grade1+grade2)/2
+    return avg
+
+# Test cases - Dictionary Datatype
+caseList=[
+    {'input1': 1, 'input2': 1, 'expected': 1},
+    {'input1': 10, 'input2': 5, 'expected': 7.5},
+    {'input1': 5, 'input2': 10, 'expected': 7.5},
+    {'input1': 1000, 'input2': 30000, 'expected': 15500},
+    {'input1': -27, 'input2': 33, 'expected': 3},
+    {'input1': -3, 'input2': -15, 'expected': -9},
+    {'input1': 1.2, 'input2': 3.6, 'expected': 2.4},
+    {'input1': 0, 'input2': 0, 'expected': 0},
+    {'input1': 'one', 'input2': 3, 'expected': 'Error'},
+    {'input1': 'one', 'input2': 'two', 'expected': 'Error'},
+    {'input1': None, 'input2': None ,'expected': 'Error'},
+    {'input1': True, 'input2': False, 'expected': 'Error'},
+    {'input1': [1,2,3], 'input2': [4,5,6], 'expected': 'Error'},
+    {'input1': {'key': 'value'}, 'input2': {'key2': 'value2'}, 'expected': 'Error'},
+]
+
+# Function to test the greet function
+def test_greet():
+    for case in caseList:
+        try:
+            print('Testing with input:',str(case['input1'])+',',case['input2'])
+            try:
+                print('Actual Result:',calculateAverage(case['input1'],case['input2']))
+                print('Expected output:',case['expected'])
+            except Exception as e:
+                print('Actual Result:',e)
+                print('Expected output:',case['expected'])
+        except Exception as e:
+            print('Error:',e)
+        print()
+
+# Run the test
+test_greet()
