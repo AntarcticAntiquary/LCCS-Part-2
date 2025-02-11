@@ -42,3 +42,130 @@ def test_greet():
 
 # Run the test
 test_greet()
+
+
+# Function to test
+def calculateClassAverage(classList): # Calculates mean of a list
+    total=0
+    classNum=len(classList)
+    for result in classList: # Adds up all the elements
+        total+=result
+    avg=round(total/classNum,2) # Divide by list length and round
+    return avg
+
+
+# Test cases - Dictionary Datatype
+caseDict=[
+    {'input': [1,2,3],                 'output': 2},
+    {'input': [4,5,1,2],               'output': 3},
+    {'input': [5,32,-9],               'output': 9.33},
+    {'input': [1,2,3],                 'output': 2},
+    {'input': [23,8.5,0.1],            'output': 10.53},
+    {'input': ['one','two','three'],   'output': 'Error'},
+    {'input': [],                      'output': 'Error'},
+    {'input': [1],                     'output': 1},
+    {'input': [True,False,True,False], 'output': 0.5},
+    {'input': 1,                       'output': 'Error'},
+    {'input': 'myList',                'output': 'Error'},
+    {'input': True,                    'output': 'Error'},
+    {'input': 3.14159,                 'output': 'Error'},
+]
+
+
+# Function to test the greet function 
+def testFunc():
+    for case in caseDict:
+        try:
+            print('Testing with input:',case['input'])
+            print('Actual Result:',calculateClassAverage(case['input']))
+            print('Expected output:',case['output'])
+        except Exception as e:
+            print('Actual Result:',e)
+            print('Expected output:',case['output'])
+        print()
+
+# Run the test
+testFunc()
+
+ Function to test
+def calculateAverage(grade1,grade2): # Calculates the mean of two numbers
+    avg=(grade1+grade2)/2
+    return avg
+
+# Test cases - Dictionary Datatype
+caseList=[
+    {'input1': 1, 'input2': 1, 'eOutput': 1},
+    {'input1': 10, 'input2': 5, 'eOutput': 7.5},
+    {'input1': 5, 'input2': 10, 'eOutput': 7.5},
+    {'input1': 1000, 'input2': 30000, 'eOutput': 15500},
+    {'input1': -27, 'input2': 33, 'eOutput': 3},
+    {'input1': -3, 'input2': -15, 'eOutput': -9},
+    {'input1': 1.2, 'input2': 3.6, 'eOutput': 2.4},
+    {'input1': 0, 'input2': 0, 'eOutput': 0},
+    {'input1': 'one', 'input2': 3, 'eOutput': 'Error'},
+    {'input1': 'one', 'input2': 'two', 'eOutput': 'Error'},
+    {'input1': None, 'input2': None ,'eOutput': 'Error'},
+    {'input1': True, 'input2': False, 'eOutput': 'Error'},
+    {'input1': True, 'input2': True, 'eOutput': 'Error'},
+    {'input1': False, 'input2': False, 'eOutput': 'Error'},
+    {'input1': [1,2,3], 'input2': [4,5,6], 'eOutput': 'Error'},
+    {'input1': {'key': 'value'}, 'input2': {'key2': 'value2'}, 'eOutput': 'Error'},
+]
+
+# Function to test the greet function
+def test_greet():
+    for case in caseList:
+        try:
+            print('Testing with input:',str(case['input1'])+',',case['input2'])
+            print('Actual Result:',calculateAverage(case['input1'],case['input2']))
+            print('Expected output:',case['eOutput'])
+        except Exception as e:
+            print('Actual Result:',e)
+            print('Expected output:',case['eOutput'])
+        print()
+
+# Run the test
+test_greet()
+
+
+# Function to test
+def calculateClassAverage(classList): # Calculates mean of a list
+    total=0
+    classNum=len(classList)
+    for result in classList: # Adds up all the elements
+        total+=result
+    avg=round(total/classNum,2) # Divide by list length and round
+    return avg
+
+
+# Test cases - Dictionary Datatype
+caseDict=[
+    {'input': [1,2,3],                 'output': 2},
+    {'input': [4,5,1,2],               'output': 3},
+    {'input': [5,32,-9],               'output': 9.33},
+    {'input': [1,2,3],                 'output': 2},
+    {'input': [23,8.5,0.1],            'output': 10.53},
+    {'input': ['one','two','three'],   'output': 'Error'},
+    {'input': [],                      'output': 'Error'},
+    {'input': [1],                     'output': 1},
+    {'input': [True,False,True,False], 'output': 0.5},
+    {'input': 1,                       'output': 'Error'},
+    {'input': 'myList',                'output': 'Error'},
+    {'input': True,                    'output': 'Error'},
+    {'input': 3.14159,                 'output': 'Error'},
+]
+
+# Function to test the greet function
+def testFunc():
+    for case in caseDict:
+        try:
+            print('Testing with input:',case['input'])
+            print('Actual Result:',calculateClassAverage(case['input']))
+            print('Expected output:',case['output'])
+        except Exception as e:
+            print('Actual Result:',e)
+            print('Expected output:',case['output'])
+        print()
+
+# Run the test
+testFunc()
